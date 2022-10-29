@@ -1,0 +1,20 @@
+<resources>
+  <color name="colorPrimary">#AB47BC</color>
+  <color name="colorPrimaryLight">#BA68C8</color>
+  <color name="colorPrimaryDark">#4527A0</color>
+  <color name="colorAccent">#E1BEE7</color>
+  <color name="colorSecondaryLight">#FF9E80</color>
+  <color name="colorSecondaryDark">#DD2C00</color>
+  <color name="textColorOnPrimary">#ffffff</color>
+  <color name="color1">#4527A0</color>
+  <color name="color2">#2F589E</color>
+  <color name="color3">#3A1B18</color>
+  <color name="black">#090707</color>
+  <!-- chart color -->
+  <color name="chart">#05C5DD</color>
+  <color name="chart2">#4CAF50</color>
+  <color name="chart3">#E040FB</color>
+  <color name="chart4">#F4511E</color>
+  <color name="chart5">#F57C00</color>
+  <color name="colorPrimaryModerate">#530660</color>
+</resources>

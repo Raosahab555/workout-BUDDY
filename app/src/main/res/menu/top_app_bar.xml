@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/walk"
+        android:icon="@drawable/icon_physical_activity_walk"
+        android:title="@string/start_walking"
+        android:contentDescription="@string/content_description_walk"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item android:id="@+id/start_walk"
+                android:title="@string/start"
+                android:contentDescription="@string/content_description_Start_walk"
+                app:showAsAction="ifRoom" />
+
+            <item android:id="@+id/stop_walk"
+                android:title="@string/stop"
+                android:contentDescription="@string/content_description_stop_walk"
+                app:showAsAction="ifRoom" />
+
+            <item android:id="@+id/heartRate"
+                android:title="@string/heart_rate"
+                android:contentDescription="@string/content_description_hrt"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+    </item>
+
+    <item android:id="@+id/music_btn"
+        android:icon="@drawable/icon_music"
+        android:title="@string/music"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/sign_out"
+        app:showAsAction="ifRoom" />
+
+
+</menu>
