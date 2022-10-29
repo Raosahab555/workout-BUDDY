@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.workoutcompanion">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+
+    <uses-feature android:name="android.hardware.sensor.stepcounter" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.Sensor.STEP_COUNTER" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.workoutcompanion.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
+        <receiver
+            android:name=".activities.home.StepsReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".activities.home.StepCounterService"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:name=".activities.home.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".activities.diet.ResultOfDiet1"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.diet.Nutrition"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.diet.RecipeInfoSpesific"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.chat.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.chat.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.chat.NewMessageActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.chat.LatestMessageActivity" />
+        </activity>
+        <activity android:name=".activities.chat.LatestMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.chat.ChatLogActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.chat.NewMessageActivity" />
+        </activity>
+        <activity android:name=".activities.chat.ChatActivity" />
+
+        <activity android:name=".activities.MusicActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.profile.ProfileActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
