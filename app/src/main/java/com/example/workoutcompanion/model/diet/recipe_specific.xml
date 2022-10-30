@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFD7C1"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="379dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="8dp"
+
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/card_front"
+        app:layout_constraintStart_toStartOf="@+id/card_front"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="81dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="178dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bodrer_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TextView22"
+                    android:layout_width="72dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:text="@string/amount"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="49dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:text="@string/daily_needs"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:contentDescription="@string/daily_needs1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_protein"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/bodrer_linear"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="81dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/protein"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:contentDescription="@string/protein"/>
+
+            <TextView
+                android:id="@+id/textView_Protein"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/protein_holder"
+                android:textAlignment="center"
+                android:contentDescription="@string/amount_of_protein"/>
+
+            <TextView
+                android:id="@+id/Prot_per"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/textview"
+                android:contentDescription="@string/daily_needs_of_protein"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_fat"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/bodrer_linear"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="81dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/fat"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:contentDescription="@string/fat"/>
+
+            <TextView
+                android:id="@+id/textView_Fat"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/fat_holder"
+                android:textAlignment="center"
+                android:contentDescription="@string/amount_of_fat"/>
+
+            <TextView
+                android:id="@+id/Fat_per"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/textview"
+                android:contentDescription="@string/daily_needs_of_fat"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_Carb"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/bodrer_linear"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="81dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/carbohydrates"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:contentDescription="@string/carbohydrates" />
+
+            <TextView
+                android:id="@+id/textView_Carbohydrates"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/carbs_holder"
+                android:textAlignment="center"
+                android:contentDescription="@string/amount_of_carbs"/>
+
+            <TextView
+                android:id="@+id/Calrb_per"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/textview"
+                android:contentDescription="@string/daily_needs_of_carbs"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/card_front"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/meal_picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flip_button"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/card_back"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:alpha="0"
+        android:background="#F8F5FB"
+        android:text="@string/info_about_meal_back"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flip_button"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/summary_of_the_meal"/>
+
+    <Button
+        android:id="@+id/flip_button"
+        android:layout_width="113dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/design_default_color_background"
+        android:text="@string/flip"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:icon="@drawable/ic_round_flip_camera_android_24"
+        app:iconTint="#100F0F"
+        app:layout_constraintEnd_toEndOf="@+id/card_front"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Flip button"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="292dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bodrer_linear"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/card_front"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/card_front"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        <LinearLayout
+            android:id="@+id/linear_cal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="108dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/total_calories"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:contentDescription="@string/total_calories1"/>
+
+            <TextView
+                android:id="@+id/TextView_Calorie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/calories_holder"
+                android:textAlignment="center"
+                android:contentDescription="@string/number_total_calories"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="197dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/nutrition_informations"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        android:contentDescription="@string/nutrition_informations1"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
